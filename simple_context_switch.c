@@ -51,10 +51,8 @@ int main(int argc, char ** argv){
 		printf("esp : %lx\n",esp);
 
 
-	// Thread_new((int(*)(void *))bar,&u,(size_t)nbytes,NULL);
+	Thread_new((int(*)(void *))bar,&u,(size_t)nbytes,NULL);
 
-	// Thread_new((int(*)(void *))foo,&u,(size_t)nbytes,NULL);
-	// while(1);
-	// Thread_new((int(*)(void *))foo,&u,(size_t)nbytes,NULL);
-	return 0;
+	Thread_new((int(*)(void *))foo,&u,(size_t)nbytes,NULL);
+	while(1);
 }	

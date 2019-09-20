@@ -1,6 +1,6 @@
 #ifndef THREAD_INCLUDED
 #define THREAD_INCLUDED
-// #define __USE_GNU
+#define __USE_GNU
 
 #include <stddef.h>
 #include <stdio.h>

@@ -1,0 +1,26 @@
+
+ucontext_t *uc_link     pointer to the context that will be resumed  when this context returns
+
+sigset_t    uc_sigmask  the set of signals that are blocked when this context is active
+
+stack_t     uc_stack    the stack used by this context
+
+mcontext_t  uc_mcontext a machine-specific representation of the saved context
+
+typedef struct ucontext_t {
+	struct ucontext_t *uc_link;
+	sigset_t          uc_sigmask;
+	stack_t           uc_stack;
+	mcontext_t        uc_mcontext;
+         
+} ucontext_t;
+
+
+
+
+
+               typedef struct {
+               void  *ss_sp;     /* Base address of stack */
+               int    ss_flags;  /* Flags */
+               size_t ss_size;   /* Number of bytes in stack */
+} stack_t;
